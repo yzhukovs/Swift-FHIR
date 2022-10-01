@@ -93,10 +93,10 @@ open class FHIRServerDataResponse: FHIRServerResponse {
 	public internal(set) var handler: FHIRRequestHandler?
 	
 	/// The HTTP status code.
-	open let status: Int
+	public let status: Int
 	
 	/// Response headers.
-	open let headers: [String: String]
+	public let headers: [String: String]
 	
 	/// The response body data.
 	open var body: Data?
