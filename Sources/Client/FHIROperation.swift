@@ -181,5 +181,5 @@ open class FHIROperation: CustomStringConvertible {
 
 
 /// Alias to `FHIROperation` for neat operation usage.
-public typealias $ = FHIROperation
+public typealias `$` = FHIROperation
 
