@@ -799,7 +799,7 @@ open class StructureMapGroupRuleTargetParameter: BackboneElement {
 			self.valueDecimal = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: value))” for property “\(value)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: value))” for property “\(value)” is invalid, ignoring")
 		}
 	}
 	

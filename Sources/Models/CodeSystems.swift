@@ -6433,7 +6433,7 @@ public enum SystemVersionProcessingMode: String {
 
 
 /**
-The type(s) of task performers allowed
+The Swift.type(s) of task performers allowed
 
 URL: http://hl7.org/fhir/task-performer-type
 ValueSet: http://hl7.org/fhir/ValueSet/task-performer-type

@@ -376,7 +376,7 @@ open class OperationDefinitionParameterBinding: BackboneElement {
 			self.valueSetReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: valueSet))” for property “\(valueSet)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: valueSet))” for property “\(valueSet)” is invalid, ignoring")
 		}
 	}
 	

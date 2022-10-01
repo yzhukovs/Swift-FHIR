@@ -54,7 +54,7 @@ public extension Resource {
 	- returns: A string indicating the relative URL base, e.g. "MedicationPrescription"
 	*/
 	public func relativeURLBase() -> String {
-		return type(of: self).resourceType
+		return Swift.type(of: self).resourceType
 	}
 	
 	/**
@@ -213,7 +213,7 @@ public extension Resource {
 				// no resource, but hopefully the id was detected in the Location header, so go and read the resource
 				catch FHIRError.responseNoResourceReceived {
 					if let id = self.id?.string {
-						type(of: self).read(id, server: server) { resource, error in
+						Swift.type(of: self).read(id, server: server) { resource, error in
 							if let resource = resource {
 								do {
 									var context = FHIRInstantiationContext(strict: !handler.options.contains(.lenient))
@@ -289,7 +289,7 @@ public extension Resource {
 		if let server = _server {
 			do {
 				let path = try relativeURLPath()
-				type(of: self).delete(path, server: server, callback: callback)
+				Swift.type(of: self).delete(path, server: server, callback: callback)
 			}
 			catch let error {
 				callback((error as! FHIRError))

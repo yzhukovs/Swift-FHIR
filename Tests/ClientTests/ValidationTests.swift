@@ -21,7 +21,7 @@ Test how JSON errors are handled.
 class ValidationTests: XCTestCase {
 	
 	func instantiateFrom(filename: String) throws -> Questionnaire {
-		let json = try Bundle(for: type(of: self)).fhir_json(from: filename, subdirectory: "TestResources")
+		let json = try Bundle(for: Swift.type(of: self)).fhir_json(from: filename, subdirectory: "TestResources")
 		return try Questionnaire(json: json)
 	}
 	

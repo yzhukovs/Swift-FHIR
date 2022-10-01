@@ -108,7 +108,7 @@ open class SubstanceIngredient: BackboneElement {
 			self.substanceReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: substance))” for property “\(substance)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: substance))” for property “\(substance)” is invalid, ignoring")
 		}
 	}
 	

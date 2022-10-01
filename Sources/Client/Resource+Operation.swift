@@ -28,9 +28,9 @@ public extension Resource {
 	public func search(_ query: Any) -> FHIRSearch {
 		if let _ = self.id {
 			NSLog("UNFINISHED, must add '_id' reference to search expression")
-			//return FHIRSearch(subject: "_id", reference: myID, type: type(of: self))
+			//return FHIRSearch(subject: "_id", reference: myID, type: Swift.type(of: self))
 		}
-		return FHIRSearch(type: type(of: self), query: query)
+		return FHIRSearch(type: Swift.type(of: self), query: query)
 	}
 	
 	/**
@@ -50,7 +50,7 @@ public extension Resource {
 		if let server = _server {
 			if let server = server as? FHIROpenServer {
 				operation.instance = self
-				type(of: self)._perform(operation: operation, server: server, callback: callback)
+				Swift.type(of: self)._perform(operation: operation, server: server, callback: callback)
 			}
 			else {
 				callback(nil, FHIRError.error("Must be living on a FHIROpenServer or subclass"))

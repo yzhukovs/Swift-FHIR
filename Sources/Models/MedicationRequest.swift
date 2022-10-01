@@ -109,7 +109,7 @@ open class MedicationRequest: DomainResource {
 			self.medicationReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: medication))” for property “\(medication)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: medication))” for property “\(medication)” is invalid, ignoring")
 		}
 		self.subject = subject
 	}

@@ -111,7 +111,7 @@ open class MedicationIngredient: BackboneElement {
 			self.itemReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: item))” for property “\(item)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: item))” for property “\(item)” is invalid, ignoring")
 		}
 	}
 	
@@ -248,7 +248,7 @@ open class MedicationPackageContent: BackboneElement {
 			self.itemReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: item))” for property “\(item)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: item))” for property “\(item)” is invalid, ignoring")
 		}
 	}
 	

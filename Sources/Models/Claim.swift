@@ -346,7 +346,7 @@ open class ClaimDiagnosis: BackboneElement {
 			self.diagnosisReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: diagnosis))” for property “\(diagnosis)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: diagnosis))” for property “\(diagnosis)” is invalid, ignoring")
 		}
 		self.sequence = sequence
 	}
@@ -992,7 +992,7 @@ open class ClaimProcedure: BackboneElement {
 			self.procedureReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: procedure))” for property “\(procedure)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: procedure))” for property “\(procedure)” is invalid, ignoring")
 		}
 		self.sequence = sequence
 	}

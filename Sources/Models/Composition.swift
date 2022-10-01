@@ -279,7 +279,7 @@ open class CompositionRelatesTo: BackboneElement {
 			self.targetReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: target))” for property “\(target)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: target))” for property “\(target)” is invalid, ignoring")
 		}
 	}
 	

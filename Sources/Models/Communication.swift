@@ -179,7 +179,7 @@ open class CommunicationPayload: BackboneElement {
 			self.contentReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: content))” for property “\(content)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: content))” for property “\(content)” is invalid, ignoring")
 		}
 	}
 	

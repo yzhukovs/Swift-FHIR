@@ -19,7 +19,7 @@ open class SearchParameter: DomainResource {
 		get { return "SearchParameter" }
 	}
 	
-	/// The resource type(s) this search parameter applies to.
+	/// The resource Swift.type(s) this search parameter applies to.
 	public var base: [FHIRString]?
 	
 	/// Chained names supported.

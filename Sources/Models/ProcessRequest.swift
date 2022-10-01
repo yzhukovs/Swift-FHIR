@@ -27,13 +27,13 @@ open class ProcessRequest: DomainResource {
 	/// Creation date.
 	public var created: DateTime?
 	
-	/// Resource type(s) to exclude.
+	/// Resource Swift.type(s) to exclude.
 	public var exclude: [FHIRString]?
 	
 	/// Business Identifier.
 	public var identifier: [Identifier]?
 	
-	/// Resource type(s) to include.
+	/// Resource Swift.type(s) to include.
 	public var include: [FHIRString]?
 	
 	/// Items to re-adjudicate.

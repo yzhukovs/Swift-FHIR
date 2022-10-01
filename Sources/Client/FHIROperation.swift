@@ -47,7 +47,7 @@ open class FHIROperation: CustomStringConvertible {
 	var instance: Resource? {
 		didSet {
 			if let inst = instance {
-				type = type(of: inst)
+				type = Swift.type(of: inst)
 				context = .instance
 			}
 		}

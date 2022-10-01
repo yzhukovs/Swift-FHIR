@@ -359,7 +359,7 @@ open class ImplementationGuidePackageResource: BackboneElement {
 			self.sourceReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: source))” for property “\(source)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: source))” for property “\(source)” is invalid, ignoring")
 		}
 	}
 	

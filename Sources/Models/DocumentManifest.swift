@@ -139,7 +139,7 @@ open class DocumentManifestContent: BackboneElement {
 			self.pReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: p))” for property “\(p)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: p))” for property “\(p)” is invalid, ignoring")
 		}
 	}
 	

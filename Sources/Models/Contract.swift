@@ -230,7 +230,7 @@ open class ContractFriendly: BackboneElement {
 			self.contentReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: content))” for property “\(content)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: content))” for property “\(content)” is invalid, ignoring")
 		}
 	}
 	
@@ -289,7 +289,7 @@ open class ContractLegal: BackboneElement {
 			self.contentReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: content))” for property “\(content)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: content))” for property “\(content)” is invalid, ignoring")
 		}
 	}
 	
@@ -348,7 +348,7 @@ open class ContractRule: BackboneElement {
 			self.contentReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: content))” for property “\(content)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: content))” for property “\(content)” is invalid, ignoring")
 		}
 	}
 	

@@ -116,7 +116,7 @@ public struct FHIRDate: DateAndTime {
 			day = date.day
 		}
 		else {
-			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(type(of: self))"))
+			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(Swift.type(of: self))"))
 			year = 0
 		}
 		_owner = owner
@@ -310,7 +310,7 @@ public struct FHIRTime: DateAndTime {
 			tookSecondsFromString = time.tookSecondsFromString
 		}
 		else {
-			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(type(of: self))"))
+			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(Swift.type(of: self))"))
 			hour = 0
 			minute = 0
 		}
@@ -474,7 +474,7 @@ public struct DateTime: DateAndTime {
 			}
 		}
 		else {
-			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(type(of: self))"))
+			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(Swift.type(of: self))"))
 			date = FHIRDate(year: 0, month: nil, day: nil)
 		}
 		_owner = owner
@@ -629,7 +629,7 @@ public struct Instant: DateAndTime {
 			date = FHIRDate(year: 0, month: nil, day: nil)
 			time = FHIRTime(hour: 0, minute: 0, second: nil)
 			timeZone = TimeZone(secondsFromGMT: 0)!
-			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(type(of: self))"))
+			context.addError(FHIRValidationError(key: "", problem: "the string “\(json)” could not be parsed into a \(Swift.type(of: self))"))
 		}
 		_owner = owner
 	}

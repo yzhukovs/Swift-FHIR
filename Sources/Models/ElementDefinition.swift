@@ -1306,7 +1306,7 @@ open class ElementDefinitionExample: Element {
 			self.valueMeta = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: value))” for property “\(value)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: value))” for property “\(value)” is invalid, ignoring")
 		}
 	}
 	

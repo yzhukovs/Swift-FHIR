@@ -103,7 +103,7 @@ open class DeviceRequest: DomainResource {
 			self.codeCodeableConcept = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: code))” for property “\(code)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: code))” for property “\(code)” is invalid, ignoring")
 		}
 		self.intent = intent
 		self.subject = subject

@@ -154,7 +154,7 @@ open class ProvenanceAgent: BackboneElement {
 			self.whoReference = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: who))” for property “\(who)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: who))” for property “\(who)” is invalid, ignoring")
 		}
 	}
 	
@@ -232,7 +232,7 @@ open class ProvenanceEntity: BackboneElement {
 			self.whatIdentifier = value
 		}
 		else {
-			fhir_warn("Type “\(type(of: what))” for property “\(what)” is invalid, ignoring")
+			fhir_warn("Type “\(Swift.type(of: what))” for property “\(what)” is invalid, ignoring")
 		}
 	}
 	

@@ -340,7 +340,7 @@ struct FHIRSearchConstruct
 				let param = FHIRSearchParam(name: key, parent: parent)
 				
 				// special handling?
-				if let handler = type(of: self).handlerFor(key) {
+				if let handler = Swift.type(of: self).handlerFor(key) {
 					handler.handle(param, value: val)
 				}
 					

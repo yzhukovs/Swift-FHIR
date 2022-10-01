@@ -53,23 +53,23 @@ class ReferenceTests: XCTestCase {
 		do {
 			let json = try readJSONFile("ReferenceBundled.json", directory: testResourcesDirectory)
 			let bundle = try Bundle(json: json)
-			XCTAssertEqual("Bundle", type(of: bundle).resourceType)
+			XCTAssertEqual("Bundle", Swift.type(of: bundle).resourceType)
 			
 			// get resources
 			let pat23 = bundle.entry?[0].resource as! Patient
-			XCTAssertEqual("Patient", type(of: pat23).resourceType)
+			XCTAssertEqual("Patient", Swift.type(of: pat23).resourceType)
 			XCTAssertEqual("Darth", pat23.name?[0].given?[0])
 			let patURN = bundle.entry?[1].resource as! Patient
-			XCTAssertEqual("Patient", type(of: patURN).resourceType)
+			XCTAssertEqual("Patient", Swift.type(of: patURN).resourceType)
 			XCTAssertEqual("Ben", patURN.name?[0].given?[0])
 			let obs123 = bundle.entry?[2].resource as! Observation
-			XCTAssertEqual("Observation", type(of: obs123).resourceType)
+			XCTAssertEqual("Observation", Swift.type(of: obs123).resourceType)
 			XCTAssertEqual("123", obs123.id)
 			let obs56 = bundle.entry?[3].resource as! Observation
-			XCTAssertEqual("Observation", type(of: obs56).resourceType)
+			XCTAssertEqual("Observation", Swift.type(of: obs56).resourceType)
 			XCTAssertEqual("56", obs56.id)
 			let obs34 = bundle.entry?[4].resource as! Observation
-			XCTAssertEqual("Observation", type(of: obs34).resourceType)
+			XCTAssertEqual("Observation", Swift.type(of: obs34).resourceType)
 			XCTAssertEqual("34", obs34.id)
 			
 			// test resolving
